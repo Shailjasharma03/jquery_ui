@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Google {background-color: rgb(223, 80, 80);}
+#Twitter {background-color: rgb(104, 216, 104);}
+#Instagram {background-color: rgb(94, 94, 211);}
+#Telegram {background-color: rgb(202, 158, 76);}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Google', this, 'red')">Google</button>
+<button class="tablink" onclick="openPage('Twitter', this, 'green')" id="defaultOpen">Twitter</button>
+<button class="tablink" onclick="openPage('Instagram', this, 'blue')">Instagram</button>
+<button class="tablink" onclick="openPage('Telegram', this, 'orange')">Telegram</button>
+
+<div id="Google" class="tabcontent">
+ <h1><a href="https://www.google.co.in/">Google</a></h1>
+</div>
+
+<div id="Twitter" class="tabcontent">
+    <h1><a href="https://twitter.com/no_v_an">Twitter</a></h1>
+</div>
+
+<div id="Instagram" class="tabcontent">
+    <h1><a href="https://www.instagram.com/">Instagram</a></h1>
+</div>
+
+<div id="Telegram" class="tabcontent">
+  <h1><a href="https://telegram.org/">Telegram</a></h1>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

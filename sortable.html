@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<head>  
+   <title>jQuery UI Sortable - Example</title>  
+   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+   <style>  
+      #sortable-1 { list-style-type: none; margin: 0;   
+         padding: 0; width: 25%; }  
+      #sortable-1 li { margin: 0 3px 3px 3px; padding: 0.4em;   
+         padding-left: 1.5em; font-size: 17px; height: 16px; }  
+      .default {  
+         background: rgb(238, 144, 233);  
+         border: 1px solid #DDDDDD;  
+         color: #1208a8;  
+      }  
+   </style>  
+   <script>  
+      $(function() {  
+         $( "#sortable-1" ).sortable();  
+      });  
+   </script>  
+</head>  
+<body>  
+<h1 style="color:rgb(255, 81, 0)"> Available States</h1>  
+   <ul id="sortable-1">  
+      <li class="default">Gujarat</li>  
+      <li class="default">Rajasthan</li>  
+      <li class="default">Maharashtra</li>  
+      <li class="default">Karnataka</li>  
+      <li class="default">Tamilnadu</li>  
+      <li class="default">Kerala</li>  
+      <li class="default">Punjab</li>  
+   </ul>  
+</body>  
+</html> 
+
+ 
